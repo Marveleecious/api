@@ -25,13 +25,17 @@ fetch("https://randomuser.me/api/").then(function(data){
 
           //location
           let location = result = response.results[0].location;
-          let fullLocation = "<br> street; " + location.street.number + " " + location.street.name + "<br> city; " + location.city + "<br> state; " + location.state + "<br> country; " + location.country + "<br> postcode; " +  location.postcode + "<br> coordinates; " + location.coordinates.latitude + " " + location.coordinates.longitude + "<br> timezone; " + location.timezone.offset + " " + location.timezone.description;
+          let fullLocation = "<br> street; " + location.street.number + " "
+           + location.street.name + "<br> city; " + location.city + "<br> state; " + location.state + "<br> country; " + location.country +
+            "<br> postcode; " +  location.postcode + "<br> coordinates; " + location.coordinates.latitude + " " + location.coordinates.longitude +
+             "<br> timezone; " + location.timezone.offset + " " + location.timezone.description;
         document.querySelector('#location').innerHTML= '<b>LOCATION:</B> ' +fullLocation;
 
 
         //login
         let login = result = response.results[0].login;
-        let fullLogin = "<br> uuid; " + login.uuid + "<br> username; " + login.username + "<br> password; " + login.password + "<br> salt; " + login.salt + "<br> md5; " + login.md5 + "<br> shal; " + login.shal + "<br> sha256; " + login.sha256;
+        let fullLogin = "<br> uuid; " + login.uuid + "<br> username; " + login.username + "<br> password; "
+         + login.password + "<br> salt; " + login.salt + "<br> md5; " + login.md5 + "<br> shal; " + login.shal;
         document.querySelector('#login').innerHTML= '<b>LOGIN:</B> ' +fullLogin;
 
         //date of birth
@@ -66,7 +70,8 @@ fetch("https://randomuser.me/api/").then(function(data){
 
         //information
         let information = result = response.info;
-        let fullInfo = "<br> seed; " + information.seed + "<br> results; " + information.results + "<br> page; " + information.page + "<br> version; " + information.version;
+        let fullInfo = "<br> seed; " + information.seed + "<br> results; " +
+         information.results + "<br> page; " + information.page + "<br> version; " + information.version;
         document.querySelector('#info').innerHTML= '<b>INFORMATION:</B> ' +fullInfo;
 
      }).catch(err =>{
