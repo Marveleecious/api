@@ -1,6 +1,6 @@
 #container{
     box-sizing: border-box;
-    margin: 50px;
+    margin: auto;
     /* margin-right: 50px; */
     height: fit-content;
     width: 400px;
